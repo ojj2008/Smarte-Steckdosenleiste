@@ -4,6 +4,6 @@
 
 # Dieses Projekt wurde von [Jonathan Westphal](https://jonathan-westphal.de/) erstellt.
 
-Bei zusätzlichem Interesse gerne an: mail@jonathan-westphal.de schreiben oder den Abschlussbericht des Projektes lesen.
+Bei zusätzlichem Interesse gerne an: mail@jonathan-westphal.de schreiben oder den [Abschlussbericht](Abschlussbericht.pdf) des Projektes lesen.
 
 
