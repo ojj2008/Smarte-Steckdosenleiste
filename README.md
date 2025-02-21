@@ -1,6 +1,6 @@
 # Smarte-Steckdosenleiste
 
-<img src="picture_main" alt="Logo">
+<img src="main_picture.png" alt="Logo">
 
 
 
