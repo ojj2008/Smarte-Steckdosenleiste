@@ -1,0 +1,18 @@
+1  - Error_einschaltstrombegrenzer
+2  - Error_master
+3  - Error_section01
+4  - Error_section02
+
+20 - Error_wifi
+21 - Error_Wifi_Verbindungsabbruch
+22 - Error_ota
+23 - Error_mDns
+
+30 - Error_database
+31 - Error_database_initialisierung
+
+40 - Error_internal_temp_sensor
+41 - Error_external_temp_sensor
+
+50 - Error_eeprom
+51 - Error_eeprom_initialisierung
