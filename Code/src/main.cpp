@@ -127,7 +127,7 @@ void loop() {
 
   if(millis() - last_database_upload >= interval_database_upload){
 
-    CurrentsensorData data = get_Currentsensor();
+    CurrentsensorData &data = get_Currentsensor();
 
 
     upload_to_database(data.apparent_power, data.active_power, data.reactive_power, data.power_factor, status, Wifi_RSSI(), get_CPU_Temp(), get_PCB_Temp(), Gesamtverbrauch_startwert + Gesamtverbrauch);
@@ -157,11 +157,11 @@ void loop() {
        if (checkTimeout && (current_time - firstPressTime > multiPressTimeout)) {
            if (pressCount == 1) {
                if(display_status == 1){
-                   CurrentsensorData_Verlauf data_verlauf = update_Currentsensorverlauf();
+                   CurrentsensorData_Verlauf &data_verlauf = update_Currentsensorverlauf();
                    display_power_history(data_verlauf.active_power_verlauf);
                    display_status = 2;
                } else if(display_status == 2){
-                   CurrentsensorData data = get_Currentsensor();
+                   CurrentsensorData &data = get_Currentsensor();
                    display_current_power(data.active_power);
                    display_status = 1;
                }
@@ -170,11 +170,11 @@ void loop() {
                display_easter_egg();
                delay(3000);
              if(display_status == 1){
-                 CurrentsensorData_Verlauf data_verlauf = update_Currentsensorverlauf();
+                 CurrentsensorData_Verlauf &data_verlauf = update_Currentsensorverlauf();
                  display_power_history(data_verlauf.active_power_verlauf);
                  display_status = 2;
              }else if(display_status == 2){
-                 CurrentsensorData data = get_Currentsensor();
+                 CurrentsensorData &data = get_Currentsensor();
                  display_current_power(data.active_power);
                  display_status = 1;
              }
@@ -194,11 +194,11 @@ void loop() {
 
 
     if(display_status == 1){
-      CurrentsensorData_Verlauf data_verlauf = update_Currentsensorverlauf();
+      CurrentsensorData_Verlauf &data_verlauf = update_Currentsensorverlauf();
       display_power_history(data_verlauf.active_power_verlauf);
   }
   if(display_status == 2){
-      CurrentsensorData data = get_Currentsensor();
+      CurrentsensorData &data = get_Currentsensor();
       display_current_power(data.active_power);
   }
 
@@ -210,11 +210,11 @@ void loop() {
 
   if(millis() - last_ausschalt_check >= interval_ausschalt_check && millis() > einschaltverzoegerung){
 
-    CurrentsensorData data = get_Currentsensor();
+    CurrentsensorData &data = get_Currentsensor();
 
       if(data.power_factor < power_factor_threshold){
 
-        CurrentsensorData_Verlauf data_verlauf = update_Currentsensorverlauf();
+        CurrentsensorData_Verlauf &data_verlauf = update_Currentsensorverlauf();
 
         int max_wert = 0;
 
@@ -241,7 +241,7 @@ void loop() {
 
   if(millis() - last_gesamtverbrauch_update >= interval_gesamtverbrauch_update){
 
-    CurrentsensorData data = get_Currentsensor();
+    CurrentsensorData &data = get_Currentsensor();
 
     if(data.active_power > 0){
       Gesamtverbrauch += (data.active_power * (interval_gesamtverbrauch_update / 1000.0 / 3600.0)); // in Wh
