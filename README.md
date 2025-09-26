@@ -1,10 +1,11 @@
 # Smarte-Steckdosenleiste
 
-<img src="main-picture-v1.png" alt="Logo">
 Erste Version der Smarten Steckdosenleiste
+<img src="main-picture-v1.png" alt="Logo">
 
-<img src="main-picture-v2.png" alt="Logo">
 Zweite Version der Smarten Steckdosenleiste
+<img src="main-picture-v2.png" alt="Logo">
+
 
 # Dieses Projekt wurde von [Jonathan Westphal](https://jonathan-westphal.de/) erstellt.
 
